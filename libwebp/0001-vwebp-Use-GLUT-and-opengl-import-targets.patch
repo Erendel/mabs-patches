@@ -9,21 +9,21 @@ Signed-off-by: Christopher Degawa <ccom@randomderp.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 93bcaec1..9ba66e1f 100644
+index 6ed13bd3..50ebaac3 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -598,9 +598,9 @@ if(WEBP_BUILD_VWEBP)
-     parse_makefile_am(${CMAKE_CURRENT_SOURCE_DIR}/examples "VWEBP_SRCS" "vwebp")
+@@ -542,9 +542,9 @@ if(WEBP_BUILD_VWEBP)
      add_executable(vwebp ${VWEBP_SRCS})
-     target_link_libraries(vwebp
--                          ${OPENGL_LIBRARIES}
-+                          GLUT::GLUT
-+                          OpenGL::GL
-                           exampleutil
--                          ${GLUT_glut_LIBRARY}
-                           imageioutil
-                           webp
-                           webpdemux)
+     target_link_libraries(
+       vwebp
+-      ${OPENGL_LIBRARIES}
++      GLUT::GLUT
++      OpenGL::GL
+       exampleutil
+-      ${GLUT_glut_LIBRARY}
+       imageioutil
+       webp
+       webpdemux)
 -- 
 2.37.1
 
